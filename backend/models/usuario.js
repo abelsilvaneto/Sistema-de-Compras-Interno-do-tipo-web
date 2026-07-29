@@ -24,16 +24,20 @@ const Usuario = db.define('usuario', {
         allowNull: false
     },
     phone: {
-        type: DataTypes.STRING(30)
+        type: DataTypes.STRING(30),
+        allowNull: false
     },
     address: {
-        type: DataTypes.STRING(150)
+        type: DataTypes.STRING(150),
+        allowNull: false
     },
     city: {
-        type: DataTypes.STRING(50)
+        type: DataTypes.STRING(50),
+        allowNull: false
     },
     state: {
-        type: DataTypes.STRING(50)
+        type: DataTypes.STRING(50),
+        allowNull: false
     }
 }, {
     timestamps: false,

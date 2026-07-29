@@ -31,10 +31,12 @@ const Produto = db.define('produto', {
         allowNull: false
     },
     brand: {
-        type: DataTypes.STRING(50)
+        type: DataTypes.STRING(50),
+        allowNull: false
     },
     thumbnail: {
-        type: DataTypes.STRING(255)
+        type: DataTypes.STRING(255),
+        allowNull: false
     }
 }, {
     timestamps: false,
