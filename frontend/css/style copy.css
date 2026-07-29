@@ -1,0 +1,63 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, button, select, textarea {
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    color: #2c3e50;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #219150;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #34495e;
+}
+
+th,
+td {
+    border: 1px solid #7f8c8d;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #2980b9;
+}
+
+.chart-box {
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/usuarios.js"defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./usuarios.html">Usuários</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./compras.html">Movimentações/Vendas</a>
+            <a href="./relatorio_analitico.html">Analítico</a>
+            <a href="./relatorio_grafico.html">Gráficos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Gerenciamento de Usuários</h1>
+        <form id="formUsuario">
+            <input type="hidden" id="codUsuario">
+            <label>Nome:</label><input type="text" id="firstName" required>
+            <label>Sobrenome:</label><input type="text" id="lastName" required>
+            <label>Idade:</label><input type="number" id="age" required>
+            <label>E-mail:</label><input type="email" id="email" required>
+            <label>Telefone:</label><input type="text" id="phone">
+            <label>Endereço:</label><input type="text" id="address">
+            <label>Cidade:</label><input type="text" id="city">
+            <label>Estado:</label><input type="text" id="state">
+            <button type="submit">Salvar Usuário</button>
+        </form>
+        <br>
+        <h2>Usuários Cadastrados</h2>
+        <table id="tabelaUsuarios">
+            <thead>
+                <tr>
+                    <th>ID</th><th>Nome</th><th>E-mail</th><th>Cidade</th><th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+
+</body>
+</html>

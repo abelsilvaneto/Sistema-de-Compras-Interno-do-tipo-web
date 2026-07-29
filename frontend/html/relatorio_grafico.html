@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios Gráficos Dinâmicos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="../js/relatorio_grafico.js"defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./usuarios.html">Usuários</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./compras.html">Movimentações/Vendas</a>
+            <a href="./relatorio_analitico.html">Analítico</a>
+            <a href="./relatorio_grafico.html">Gráficos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Gráfico 1: Estoque Físico Atual (Produtos Críticos &lt; 10)</h1>
+        <div class="chart-box">
+            <canvas id="chart1"></canvas>
+        </div>
+
+        <br><br>
+        <h1>Gráfico 2: Volume Financeiro de Compras (Top 5 Saídas)</h1>
+        <div class="chart-box">
+            <canvas id="chart2"></canvas>
+        </div>
+    </main>
+
+   
+</body>
+</html>

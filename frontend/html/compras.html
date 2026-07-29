@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Movimentações e Vendas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+        <script src="../js/compras.js"defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./usuarios.html">Usuários</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./compras.html">Movimentações/Vendas</a>
+            <a href="./relatorio_analitico.html">Analítico</a>
+            <a href="./relatorio_grafico.html">Gráficos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Registrar Movimentação de Compra/Estoque</h1>
+        <form id="formCompra">
+            <label>ID Usuário:</label><input type="number" id="idUsuario" required>
+            <label>ID Produto:</label><input type="number" id="idProduto" required>
+            <label>Tipo Movimento:</label>
+            <select id="tipoMovimento">
+                <option value="ENTRADA">ENTRADA</option>
+                <option value="SAIDA">SAÍDA</option>
+            </select>
+            <label>Quantidade:</label><input type="number" id="quantidadeMovimentada" required>
+            <label>Forma de Pagamento:</label>
+            <select id="formaPagamento">
+                <option value="DEBITO">DÉBITO</option>
+                <option value="CREDITO">CRÉDITO</option>
+                <option value="DINHEIRO">DINHEIRO</option>
+            </select>
+            <label>Status:</label>
+            <select id="statusCompra">
+                <option value="PAGA">PAGA</option>
+                <option value="PENDENTE">PENDENTE</option>
+            </select>
+            <label>Data:</label><input type="date" id="dataCompra" required>
+            <button type="submit">Registrar Operação</button>
+        </form>
+        <br><div id="msg"></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+### - Saúde do Servidor
+GET http://localhost:3000/
+Content-Type: application/json
+
+### - Executar Carga em Lote (bulkCreate)
+POST http://localhost:3000/bulk-create
+Content-Type: application/json
+
+### - Cadastrar Usuário
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+  "firstName": "Carlos",
+  "lastName": "Silva",
+  "age": 30,
+  "email": "carlos@senai.br",
+  "phone": "47999999999",
+  "address": "Rua Central, 100",
+  "city": "Tijucas",
+  "state": "SC"
+}
+
+### - Listar Usuários
+GET http://localhost:3000/usuarios
+Content-Type: application/json
+
+### - Consultar Usuário por ID
+GET http://localhost:3000/usuario/1
+Content-Type: application/json
+
+### - Cadastrar Produto com estoque baixo (crítico)
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+  "title": "Teclado Mecânico RGB",
+  "description": "Teclado para escritório e games",
+  "category": "Periféricos",
+  "price": 250.00,
+  "discountPercentage": 5.00,
+  "stock": 5,
+  "brand": "TechKey",
+  "thumbnail": "https://dummyjson.com/icon/square/100"
+}
+
+### - Listar Produtos
+GET http://localhost:3000/produtos
+Content-Type: application/json
+
+### - Registrar Compra (ENTRADA de Estoque - Sucesso)
+POST http://localhost:3000/compra
+Content-Type: application/json
+
+{
+  "idUsuario": 1,
+  "idProduto": 1,
+  "tipoMovimento": "ENTRADA",
+  "quantidadeMovimentada": 15,
+  "precoUnitario": 250.00,
+  "descontoAplicado": 0,
+  "formaPagamento": "DEBITO",
+  "statusCompra": "PAGA",
+  "dataCompra": "2026-07-29"
+}
+
+### - Registrar Compra (SAIDA de Estoque - Sucesso)
+POST http://localhost:3000/compra
+Content-Type: application/json
+
+{
+  "idUsuario": 1,
+  "idProduto": 1,
+  "tipoMovimento": "SAIDA",
+  "quantidadeMovimentada": 5,
+  "precoUnitario": 250.00,
+  "descontoAplicado": 10.00,
+  "formaPagamento": "CREDITO",
+  "statusCompra": "PAGA",
+  "dataCompra": "2026-07-29"
+}
+
+### - Registrar Compra (SAIDA com erro por falta de saldo)
+POST http://localhost:3000/compra
+Content-Type: application/json
+
+{
+  "idUsuario": 1,
+  "idProduto": 1,
+  "tipoMovimento": "SAIDA",
+  "quantidadeMovimentada": 9999,
+  "precoUnitario": 250.00,
+  "formaPagamento": "DINHEIRO",
+  "statusCompra": "PENDENTE",
+  "dataCompra": "2026-07-29"
+}
+
+### - Consultar View de Produtos Críticos
+GET http://localhost:3000/relatorio/produtos-criticos
+Content-Type: application/json
+
+### - Consultar View de Volume de Compras
+GET http://localhost:3000/relatorio/volume-compras
+Content-Type: application/json
+
+### - Consultar Top 5 Volume de Compras (Gráfico 2)
+GET http://localhost:3000/relatorio/top5-volume-compras
+Content-Type: application/json
