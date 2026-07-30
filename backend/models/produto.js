@@ -23,7 +23,7 @@ const Produto = db.define('produto', {
         allowNull: false
     },
     discountPercentage: {
-        type: DataTypes.DECIMAL(5, 2),
+        type: DataTypes.DECIMAL(10, 2),
         defaultValue: 0.00
     },
     stock: {

@@ -1,6 +1,5 @@
 async function carregarRelatorios() {
     try {
-        // --- 1. RELATÓRIO DE PRODUTOS CRÍTICOS ---
         const resC = await fetch('http://localhost:3000/relatorio/produtos-criticos');
         const dataC = await resC.json();
         
@@ -14,7 +13,6 @@ async function carregarRelatorios() {
                 tbC.innerHTML = '<tr><td colspan="4" style="color: orange;">Nenhum produto crítico com estoque < 10 encontrado.</td></tr>';
             } else {
                 dataC.forEach(p => {
-                    // Flexibilidade para diferentes nomes de campos do Sequelize/SQL
                     const codigo = p.codigo_produto || p.codProduto || p.id || '-';
                     const nome = p.nome || p.title || '-';
                     const categoria = p.categoria || p.category || '-';
@@ -31,7 +29,6 @@ async function carregarRelatorios() {
             }
         }
 
-        // --- 2. RELATÓRIO DE VOLUME FINANCEIRO ---
         const resV = await fetch('http://localhost:3000/relatorio/volume-compras');
         const dataV = await resV.json();
         
@@ -64,5 +61,4 @@ async function carregarRelatorios() {
     }
 }
 
-// Executa assim que a página carregar
 carregarRelatorios();

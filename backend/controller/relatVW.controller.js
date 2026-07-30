@@ -7,6 +7,7 @@ const listarProdutosCriticos = async (req, res) => {
         res.status(200).json(dados)
     } catch (err) {
         res.status(500).json({ message: 'Erro ao buscar relatório de produtos críticos' })
+        console.error('Erro ao buscar relatório de produtos críticos', err)
     }
 }
 
@@ -16,6 +17,7 @@ const listarVolumeCompras = async (req, res) => {
         res.status(200).json(dados)
     } catch (err) {
         res.status(500).json({ message: 'Erro ao buscar relatório de volume de compras' })
+        console.error('Erro ao buscar relatório de volume de compras', err)
     }
 }
 
@@ -28,6 +30,7 @@ const listarTop5VolumeCompras = async (req, res) => {
         res.status(200).json(dados)
     } catch (err) {
         res.status(500).json({ message: 'Erro ao buscar top 5 volume de compras' })
+        console.error('Erro ao buscar top 5 volume de compras', err)
     }
 }
 

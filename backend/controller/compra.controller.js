@@ -46,7 +46,8 @@ const cadastrar = async (req, res) => {
 
         res.status(201).json(novaCompra)
     } catch (err) {
-        res.status(500).json({ message: 'Erro ao registrar compra/movimentação', error: err.message })
+        res.status(500).json({ message: 'Erro ao registrar compra/movimentação', err})
+        console.error('Erro ao registrar compra/movimentação', err)
     }
 }
 
@@ -55,7 +56,8 @@ const listar = async (req, res) => {
         const dados = await Compra.findAll({ include: ['usuarioCompra', 'produtoCompra'] })
         res.status(200).json(dados)
     } catch (err) {
-        res.status(500).json({ message: 'Erro ao listar movimentações' })
+        res.status(500).json({ message: 'Erro ao listar movimentações',err })
+        console.error('Erro ao listar movimentações', err)
     }
 }
 

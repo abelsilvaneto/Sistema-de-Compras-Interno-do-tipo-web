@@ -48,8 +48,11 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: 'API do Sistema de Compras Interno ativa!' })
 })
 
-conn.sync().then(() => {
+conn.sync()
+.then(() => {
     app.listen(PORT, HOST, () => {
         console.log(`Servidor rodando em http://${HOST}:${PORT}`)
     })
-}).catch(err => console.error('Erro na conexão com BD:', err))
+}).catch((err) =>{
+     console.error('Erro na conexão com BD:', err)
+})

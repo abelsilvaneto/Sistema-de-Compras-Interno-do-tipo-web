@@ -34,7 +34,8 @@ const carregarDadosEmLote = async (req, res) => {
 
         res.status(200).json({ message: 'Carga em lote realizada com sucesso via bulkCreate!' })
     } catch (err) {
-        res.status(500).json({ message: 'Erro ao realizar a carga em lote', error: err.message })
+        res.status(500).json({ message: 'Erro ao realizar a carga em lote', err })
+        console.error('Erro ao realizar a carga em lote', err)
     }
 }
 
